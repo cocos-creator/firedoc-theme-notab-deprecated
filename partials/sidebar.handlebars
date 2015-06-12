@@ -7,16 +7,16 @@
       <ul id="api-classes" class="apis classes">
       {{#globals.modules}}
         <li>
-          <a class="module" href="{{project.root}}/modules/{{name}}.html">{{name}}</a>
+          <a class="module" href="{{relink "modules"}}/{{name}}.html">{{name}}</a>
           {{> sidebar-members}}
         </li>
       {{/globals.modules}}
       {{#globals.classes}}
         <li>
           {{#if is_enum}}
-            <a class="class" href="{{project.root}}/enums/{{name}}.html">{{name}}</a>
+            <a class="class" href="{{relink "enums"}}/{{name}}.html">{{name}}</a>
           {{else}}
-            <a class="class" href="{{project.root}}/classes/{{name}}.html">{{name}}</a>
+            <a class="class" href="{{relink "classes"}}/{{name}}.html">{{name}}</a>
           {{/if}}
           {{> sidebar-members}}
         </li>

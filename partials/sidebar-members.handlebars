@@ -1,9 +1,11 @@
 
 {{#if members}}
-  <ul class="members">
+  <ul id="api-members" class="apis members">
     {{#members}}
       <li>
-        <a>{{name}}</a>
+        <a href="{{relink parent.type}}/{{parent.name}}.html#{{itemtype}}_{{name}}">
+          {{name}}
+        </a>
       </li>
     {{/members}}
   </ul>
