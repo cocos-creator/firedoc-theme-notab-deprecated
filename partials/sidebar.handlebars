@@ -1,39 +1,26 @@
 <div id="api-list">
   <div id="api-tabview" class="tabview">
-    <ul class="tabs">
-      <li><a href="#api-classes">Classes</a></li>
-      <li><a href="#api-modules">Modules</a></li>
-      <li><a href="#api-enums">Enums</a></li>
-    </ul>
 
     <div id="api-tabview-filter">
       <input type="search" id="api-filter" placeholder="Type to filter APIs">
     </div>
 
     <div id="api-tabview-panel">
-
       <ul id="api-classes" class="apis classes">
-      {{#classes}}
+      {{#globals.modules}}
         <li>
-          <a class="class" href="{{../projectRoot}}classes/{{name}}.html">{{displayName}}</a>
-          <a href="{{../projectRoot}}modules/{{module}}.html" class="api-list-item-module">@{{module}}</a>
+          <a class="module" href="{{project.root}}/modules/{{name}}.html">{{name}}</a>
         </li>
-      {{/classes}}
-      </ul>
-
-      <ul id="api-modules" class="apis modules">
-      {{#allModules}}
-        <li><a class="module" href="{{../projectRoot}}modules/{{name}}.html">{{displayName}}</a></li>
-      {{/allModules}}
-      </ul>
-
-      <ul id="api-enums" class="apis enums">
-      {{#enums}}
+      {{/globals.modules}}
+      {{#globals.classes}}
         <li>
-          <a href="{{../projectRoot}}enums/{{name}}.html">{{displayName}}</a>
-          <a href="{{../projectRoot}}modules/{{module}}.html" class="api-list-item-module">@{{module}}</a>
+          {{#if is_enum}}
+            <a class="class" href="{{project.root}}/enums/{{name}}.html">{{name}}</a>
+          {{else}}
+            <a class="class" href="{{project.root}}/classes/{{name}}.html">{{name}}</a>
+          {{/if}}
         </li>
-      {{/enums}}
+      {{/globals.classes}}
       </ul>
     </div>
   </div>

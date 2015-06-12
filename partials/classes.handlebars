@@ -1,56 +1,58 @@
+
 <h1>{{name}} Class</h1>
 <div class="box meta">
-    {{#if uses}}
-        <div class="uses">
-            Uses
-            <ul class="inline commas">
-                {{#uses}}
-                    <li><a href="{{.}}.html">{{.}}</a></li>
-                {{/uses}}
-            </ul>
-        </div>
-    {{/if}}
+  {{#if uses}}
+    <div class="uses">
+      Uses
+      <ul class="inline commas">
+        {{#uses}}
+          <li><a href="{{.}}.html">{{.}}</a></li>
+        {{/uses}}
+      </ul>
+    </div>
+  {{/if}}
 
-    {{#if extends}}
-        <div class="extends">
-            Extends {{#crossLink extends}}{{/crossLink}}
-        </div>
-    {{/if}}
+  {{#if extends}}
+    <div class="extends">
+      Extends {{#crossLink extends}}{{/crossLink}}
+    </div>
+  {{/if}}
 
-    {{#if foundAt}}
-        <div class="foundat">
-            Defined in: <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
-        </div>
-    {{/if}}
+  {{#if foundAt}}
+    <div class="foundat">
+      Defined in: <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
+    </div>
+  {{/if}}
 
-    {{#if module}}
-        {{#if submodule}}
-            Module: {{#crossLinkModule submodule}}{{/crossLinkModule}}<br>
-            Parent Module: {{#crossLinkModule module}}{{/crossLinkModule}}
-        {{else}}
-            Module: {{#crossLinkModule module}}{{/crossLinkModule}}
-        {{/if}}
+  {{#if module}}
+    {{#if submodule}}
+      Module: {{#crossLinkModule submodule}}{{/crossLinkModule}}<br>
+      Parent Module: {{#crossLinkModule module}}{{/crossLinkModule}}
+    {{else}}
+      Module: {{#crossLinkModule module}}{{/crossLinkModule}}
     {{/if}}
+  {{/if}}
 
-    {{#if since}}
-        <p>Available since {{since}}</p>
-    {{/if}}
+  {{#if since}}
+    <p>Available since {{since}}</p>
+  {{/if}}
+
 </div>
 
 {{#if deprecated}}
-    <div class="box deprecated">
-        <p>
-        {{#if deprecationMessage}}
-            <strong>Deprecated:</strong> {{deprecationMessage}}
-        {{else}}
-            This class is deprecated.
-        {{/if}}
-        </p>
-    </div>
+  <div class="box deprecated">
+    <p>
+      {{#if deprecationMessage}}
+        <strong>Deprecated:</strong> {{deprecationMessage}}
+      {{else}}
+        This class is deprecated.
+      {{/if}}
+    </p>
+  </div>
 {{/if}}
 
 <div class="box intro">
-    {{{classDescription}}}
+  {{{description}}}
 </div>
 
 <!-- Class member index -->
