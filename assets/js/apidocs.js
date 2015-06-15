@@ -2,7 +2,7 @@
 
 YUI().use(
     'yuidoc-meta',
-    'api-list', 'history-hash', 'node-screen', 'node-style', 'pjax',
+    'history-hash', 'node-screen', 'node-style', 'pjax',
     function(Y) {
 
         var win = Y.config.win,
@@ -248,7 +248,7 @@ YUI().use(
         pjax.upgrade();
         pjax.initLineNumbers();
 
-        Y.APIList.rootPath = pjax.get('root');
+        // Y.APIList.rootPath = pjax.get('root');
 
         Y.on('hashchange', function(e) {
             // pjax.updateTabState('hashchange');
