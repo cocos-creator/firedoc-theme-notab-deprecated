@@ -1,12 +1,56 @@
 
 {{#if members}}
-  <ul id="api-members" class="apis members">
-    {{#members}}
-      <li>
-        <a href="{{relink parent.type}}/{{parent.name}}.html#{{itemtype}}_{{name}}">
-          {{name}}
-        </a>
-      </li>
-    {{/members}}
-  </ul>
+  
+  {{#if members.properties}}
+    <h3>properties</h3>
+    <ul class="apis members api-members">
+      {{#members.properties}}
+        <li>
+          <a href="{{relink parent.type}}/{{parent.name}}.html#property_{{name}}">
+            {{name}}
+          </a>
+        </li>
+      {{/members.properties}}
+    </ul>
+  {{/if}}
+
+  {{#if members.events}}
+    <h3>events</h3>
+    <ul class="apis members api-members">
+      {{#members.events}}
+        <li>
+          <a href="{{relink parent.type}}/{{parent.name}}.html#event_{{name}}">
+            {{name}}
+          </a>
+        </li>
+      {{/members.events}}
+    </ul>
+  {{/if}}
+
+  {{#if members.attributes}}
+    <h3>attributes</h3>
+    <ul class="apis members api-members">
+      {{#members.attributes}}
+        <li>
+          <a href="{{relink parent.type}}/{{parent.name}}.html#attr_{{name}}">
+            {{name}}
+          </a>
+        </li>
+      {{/members.attributes}}
+    </ul>
+  {{/if}}
+
+  {{#if members.methods}}
+    <h3>methods</h3>
+    <ul class="apis members api-members">
+      {{#members.methods}}
+        <li>
+          <a href="{{relink parent.type}}/{{parent.name}}.html#method_{{name}}">
+            {{name}}
+          </a>
+        </li>
+      {{/members.methods}}
+    </ul>
+  {{/if}}
+
 {{/if}}

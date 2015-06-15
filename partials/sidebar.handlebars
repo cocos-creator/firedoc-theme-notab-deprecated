@@ -1,5 +1,5 @@
-<div id="api-list">
-  <div id="api-tabview" class="tabview">
+<div id="api-list" style="height:100%">
+  <div id="api-tabview" class="tabview" style="height:100%">
     <div id="api-tabview-filter">
       <input type="search" id="api-filter" placeholder="Type to filter APIs">
     </div>
@@ -8,17 +8,24 @@
       {{#globals.modules}}
         <li>
           <a class="module" href="{{relink "modules"}}/{{name}}.html">{{name}}</a>
-          {{> sidebar-members}}
+          <i class="flag">module</i>
+          <div class="members-list hidden">
+            {{> sidebar-members}}
+          </div>
         </li>
       {{/globals.modules}}
       {{#globals.classes}}
         <li>
           {{#if is_enum}}
             <a class="class" href="{{relink "enums"}}/{{name}}.html">{{name}}</a>
+            <i class="flag">enum</i>
           {{else}}
             <a class="class" href="{{relink "classes"}}/{{name}}.html">{{name}}</a>
+            <i class="flag">class</i>
           {{/if}}
-          {{> sidebar-members}}
+          <div class="members-list hidden">
+            {{> sidebar-members}}
+          </div>
         </li>
       {{/globals.classes}}
       </ul>
