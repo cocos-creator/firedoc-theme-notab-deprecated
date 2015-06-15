@@ -75,9 +75,9 @@
     </div>
   {{/if}}
 
-  {{#is_constructor}}
+  {{#if is_constructor}}
     <div class="constructor"><h2>Constructor</h2>{{>method}}</div>
-  {{/is_constructor}}
+  {{/if}}
 
   {{#if members.methods}}
     <div class="methods-detail">
