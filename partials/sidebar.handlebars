@@ -7,8 +7,10 @@
       <ul id="api-items" class="apis items">
       {{#globals.modules}}
         <li>
-          <a class="module" href="{{relink "modules"}}/{{name}}.html">{{name}}</a>
-          <i class="flag">module</i>
+          <div class="api-item-clickable">
+            <a class="module" href="{{relink "modules"}}/{{name}}.html">{{name}}</a>
+            <i class="flag">module</i>
+          </div>
           <div class="members-list hidden">
             {{> sidebar-members}}
           </div>
@@ -16,15 +18,17 @@
       {{/globals.modules}}
       {{#globals.classes}}
         <li>
-          {{#if is_enum}}
-            <a class="class" href="{{relink "enums"}}/{{name}}.html">{{name}}</a>
-            <i class="flag">enum</i>
-          {{else}}
-            <a class="class" href="{{relink "classes"}}/{{name}}.html">{{name}}</a>
-            <i class="flag">class</i>
-          {{/if}}
-          <div class="members-list hidden">
-            {{> sidebar-members}}
+          <div class="api-item-clickable">
+            {{#if is_enum}}
+              <a class="class" href="{{relink "enums"}}/{{name}}.html">{{name}}</a>
+              <i class="flag">enum</i>
+            {{else}}
+              <a class="class" href="{{relink "classes"}}/{{name}}.html">{{name}}</a>
+              <i class="flag">class</i>
+            {{/if}}
+            <div class="members-list hidden">
+              {{> sidebar-members}}
+            </div>
           </div>
         </li>
       {{/globals.classes}}

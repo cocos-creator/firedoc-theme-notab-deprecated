@@ -41,9 +41,6 @@ input[type="search"] {
   font-size: 11px;
   border-radius: 12px;
 }
-.hidden {
-  display: none;
-}
 
 /* -- Paragraphs ------------------------------------------------------------ */
 p {
@@ -452,6 +449,7 @@ ul.apis {
   font-size: 13px;
 }
 ul.apis li {
+  background-color: #fff;
   cursor: pointer;
   display: block;
   padding: 4px 8px;
@@ -480,6 +478,15 @@ ul.apis h3 {
   padding: 0;
   margin: 10px 0 5px 0;
   color: #fa0;
+}
+.members-list.hidden {
+  max-height: 0;
+  transition: all .3s;
+}
+.members-list {
+  overflow: hidden;
+  transition: all .5s;
+  max-height: 500px;
 }
 ul.members.apis li {
   border: 0;
