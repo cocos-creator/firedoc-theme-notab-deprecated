@@ -2,7 +2,7 @@ $(document).ready(function () {
 
   'use strict';
 
-  var itemsList = $('#api-items>li>.api-item-clickable');
+  var itemsList = $('#api-items>li>.api-list-item-clickable');
   itemsList.on(
     'click',
     function onclick () {

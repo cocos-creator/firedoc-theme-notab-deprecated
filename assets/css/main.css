@@ -42,6 +42,37 @@ input[type="search"] {
   border-radius: 12px;
 }
 
+/* wave css effect */
+.wave-btn,
+.wave-nav a {
+  position: relative;
+  overflow: hidden;
+  outline: none !important; /* remove dotted border */
+}
+.wave-btn:after,
+.wave-nav a:after {
+  content: "";
+  background: rgba(100, 100, 100, .5);
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  padding-top: 240%;
+  padding-left: 240%;
+  margin-top: -120%;
+  margin-left: -120%;
+  opacity: 0;
+  transition: all 1s;
+}
+.wave-btn:active:after,
+.wave-nav a:active:after {
+  padding-top: 0%;
+  padding-left: 10%;
+  margin-top: 0%;
+  margin-left: 10%;
+  opacity: 1;
+  transition: 0s;
+}
+
 /* -- Paragraphs ------------------------------------------------------------ */
 p {
   margin: 1.3em 0;
@@ -450,10 +481,7 @@ ul.apis {
 }
 ul.apis li {
   background-color: #fff;
-  cursor: pointer;
   display: block;
-  padding: 4px 8px;
-  margin: 6px 0;
   font-size: 14px;
   font-weight: bold;
   border-bottom: 1px solid #e5e5e5;
@@ -479,14 +507,19 @@ ul.apis h3 {
   margin: 10px 0 5px 0;
   color: #fa0;
 }
-.members-list.hidden {
-  max-height: 0;
-  transition: all .3s;
+ul.apis .api-list-item-clickable {
+  cursor: pointer;
+  padding: 6px 8px;
 }
-.members-list {
+ul.apis .members-list {
   overflow: hidden;
   transition: all .5s;
   max-height: 500px;
+  padding-left: 10px;
+}
+ul.apis .members-list.hidden {
+  max-height: 0;
+  transition: all .3s;
 }
 ul.members.apis li {
   border: 0;
