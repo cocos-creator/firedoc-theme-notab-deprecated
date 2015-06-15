@@ -517,6 +517,14 @@ ul.apis .api-list-item-clickable {
   cursor: pointer;
   padding: 6px 8px;
 }
+ul.apis .api-list-item-clickable a {
+  position: relative;
+  z-index: 100;
+  transition: all .3s;
+}
+ul.apis .api-list-item-clickable a:hover {
+  color: #f60;
+}
 ul.apis .members-list {
   overflow: hidden;
   transition: all .5s;
