@@ -1,18 +1,18 @@
 
 <a name="index" class="anchor-link"></a>
 <div class="index">
-  <h2>Index</h2>
+  <h3>Index</h3>
   {{> options}}
 
   {{#if members.properties}}
     <div class="index-section properties">
-      <h3>Property</h3>
+      <h4>Property</h4>
       <ul class="index-list properties">
         {{#members.properties}}
         <li class="index-item property{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if overwritten_from}} inherited{{/if}}">
             <a href="#property_{{name}}">{{name}}</a>
             {{#if static}}
-              <span class="flag static">静态</span>
+              <span class="badge badge-static static">static</span>
             {{/if}}
         </li>
         {{/members.properties}}
@@ -22,7 +22,7 @@
 
   {{#if members.attributes}}
     <div class="index-section attrs">
-      <h3>Attribute</h3>
+      <h4>Attribute</h4>
       <ul class="index-list attrs">
         {{#members.attributes}}
         <li class="index-item attr{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if overwritten_from}} inherited{{/if}}">
@@ -35,17 +35,17 @@
 
   {{#if members.methods}}
     <div class="index-section methods">
-      <h3>Method</h3>
+      <h4>Method</h4>
       <ul class="index-list methods">
         {{#is_constructor}}
         <li class="index-item method{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}} constructor">
           <a href="#method_{{name}}">{{name}}</a>
           <span class="flag constructor">constructor</span>
           {{#if static}}
-            <span class="flag static">static</span>
+            <span class="badge badge-static static">static</span>
           {{/if}}
           {{#if deprecated}}
-            <span class="flag deprecated">deprecated</span>
+            <span class="badge badge-deprecated deprecated">deprecated</span>
           {{/if}}
         </li>
         {{/is_constructor}}
@@ -54,10 +54,10 @@
         <li class="index-item method{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if overwritten_from}} inherited{{/if}}">
           <a href="#method_{{name}}">{{name}}</a>
           {{#if static}}
-            <span class="flag static">static</span>
+            <span class="badge badge-static static">static</span>
           {{/if}}
           {{#if deprecated}}
-            <span class="flag deprecated">deprecated</span>
+            <span class="badge badge-deprecated deprecated">deprecated</span>
           {{/if}}
         </li>
         {{/members.methods}}
@@ -67,16 +67,16 @@
 
   {{#if members.events}}
     <div class="index-section events">
-      <h3>Event</h3>
+      <h4>Event</h4>
       <ul class="index-list events">
         {{#members.events}}
         <li class="index-item event{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if overwritten_from}} inherited{{/if}}">
           <a href="#event_{{name}}">{{name}}</a>
           {{#if static}}
-            <span class="flag static">static</span>
+            <span class="badge badge-static static">static</span>
           {{/if}}
           {{#if deprecated}}
-            <span class="flag deprecated">deprecated</span>
+            <span class="badge badge-deprecated deprecated">deprecated</span>
           {{/if}}
         </li>
         {{/members.events}}
@@ -86,9 +86,9 @@
 
   {{#if extends}}
     <div class="index-section inherits-members">
-      <h3>Inherited Members</h3>
+      <h4>Inherited Members</h4>
       <!-- Property -->
-      <h4>Property</h4>
+      <h5>Property</h5>
       <ul class="index-list properties">
       {{#members.inherited.properties}}
         <li class="index-item property{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
@@ -97,7 +97,7 @@
       {{/members.inherited.properties}}
       </ul>
       <!-- Attribute -->
-      <h4>Attribute</h4>
+      <h5>Attribute</h5>
       <ul class="index-list attrs">
       {{#members.inherited.attributes}}
         <li class="index-item attr{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
@@ -106,7 +106,7 @@
       {{/members.inherited.attributes}}
       </ul>
       <!-- Method -->
-      <h4>Method</h4>
+      <h5>Method</h5>
       <ul class="index-list methods">
       {{#members.inherited.methods}}
         <li class="index-item method{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
@@ -115,7 +115,7 @@
       {{/members.inherited.methods}}
       </ul>
       <!-- Event -->
-      <h4>Event</h4>
+      <h5>Event</h5>
       <ul class="index-list events">
       {{#inheritedItems.events}}
         <li class="index-item event{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
@@ -128,7 +128,7 @@
 
   {{#if inheritance}}
     <div class="index-section inherits-tree">
-      <h3>Inheritance Tree</h3>
+      <h4>Inheritance Tree</h4>
       {{> class-tree}}
     </div>
   {{/if}}

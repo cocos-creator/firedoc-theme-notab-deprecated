@@ -1,5 +1,8 @@
 
-<h1>Module <code>{{name}}</code></h1>
+<h1>
+  <span class="type">Module</span>
+  <span class="name">{{name}}</span>
+</h1>
 <div class="box clearfix meta">
   {{#extra}}
     {{#selleck}}
@@ -56,13 +59,19 @@
 <!-- Class member index -->
 {{#if classes}}
   <div class="index-section properties">
-    <h3>Class</h3>
-    <ul class="index-list properties">
+    <h2>Class</h2>
+    <ul>
       {{#classes}}
-        <li class="index-item">
-          <a href="{{relink "classes"}}/{{name}}.html">
-            {{name}}
-          </a>
+        <li>
+          {{#if is_enum}}
+            <a href="{{relink "enums"}}/{{name}}.html">
+              {{name}}
+            </a>
+          {{else}}
+            <a href="{{relink "classes"}}/{{name}}.html">
+              {{name}}
+            </a>
+          {{/if}}
         </li>
       {{/classes}}
     </ul>
@@ -71,7 +80,7 @@
 
 {{#if subModules}}
   <div class="index-section properties">
-    <h3>Sub Modules</h3>
+    <h2>Sub Modules</h2>
     <ul class="index-list properties">
       {{#subModules}}
         <li class="index-item">
@@ -84,7 +93,7 @@
   </div>
 {{/if}}
 
-<h3>Direct Members</h3>
+<h2>Direct Members</h2>
 {{> items-index}}
 
 <div class="yui3-g">

@@ -4,19 +4,21 @@
     <span class="type">{{#crossLink type}}{{/crossLink}}</span>
 
     {{#if deprecated}}
-        <span class="flag deprecated"{{#if deprecationMessage}} title="{{deprecationMessage}}"{{/if}}>deprecated</span>
+        <i class="badge badge-deprecated" title="{{deprecationMessage}}">
+            deprecated
+        </i>
     {{/if}}
 
     {{#if access}}
-        <span class="flag {{access}}">{{access}}</span>
+        <i class="badge badge-access">{{access}}</i>
     {{/if}}
 
     {{#if final}}
-        <span class="flag final">final</span>
+        <i class="badge badge-final">final</i>
     {{/if}}
 
     {{#if static}}
-        <span class="flag static">static</span>
+        <i class="badge badge-static">static</i>
     {{/if}}
 
     </h3>
