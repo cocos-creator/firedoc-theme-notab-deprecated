@@ -16,7 +16,7 @@ $(document).ready(function () {
     'keyup',
     function (e) {
       var keyword = $(this).val();
-      if (e.keyCode === 13 || !keyword) filter(keyword);
+      filter(keyword);
     }
   );
 
