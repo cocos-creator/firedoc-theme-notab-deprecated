@@ -20,6 +20,13 @@ $(document).ready(function () {
     }
   );
 
+  $(document).on('keyup', function (e) {
+    // shortcut 's' -> search
+    if (e.keyCode === 83) {
+      searchBox.focus();
+    }
+  });
+
   var records = [];
   itemsCont.find('.module').each(
     getAppendor('module')
