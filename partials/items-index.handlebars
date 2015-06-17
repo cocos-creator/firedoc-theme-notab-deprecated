@@ -88,41 +88,52 @@
     <div class="index-section inherits-members">
       <h4>Inherited Members</h4>
       <!-- Property -->
-      <h5>Property</h5>
-      <ul class="index-list properties">
-      {{#members.inherited.properties}}
-        <li class="index-item property{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
-          <a href="{{extended_from}}.html#property_{{name}}">{{name}}</a>
-        </li>
-      {{/members.inherited.properties}}
-      </ul>
+      {{#if members.inherited.properties}}
+        <h5>Property</h5>
+        <ul class="index-list properties">
+        {{#members.inherited.properties}}
+          <li class="index-item property{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
+            <a href="{{extended_from}}.html#property_{{name}}">{{name}}</a>
+          </li>
+        {{/members.inherited.properties}}
+        </ul>
+      {{/if}}
+
       <!-- Attribute -->
-      <h5>Attribute</h5>
-      <ul class="index-list attrs">
-      {{#members.inherited.attributes}}
-        <li class="index-item attr{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
-          <a href="{{extended_from}}.html#attr_{{name}}">{{name}}</a>
-        </li>
-      {{/members.inherited.attributes}}
-      </ul>
+      {{#if members.inherited.attributes}}
+        <h5>Attribute</h5>
+        <ul class="index-list attrs">
+        {{#members.inherited.attributes}}
+          <li class="index-item attr{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
+            <a href="{{extended_from}}.html#attr_{{name}}">{{name}}</a>
+          </li>
+        {{/members.inherited.attributes}}
+        </ul>
+      {{/if}}
+
       <!-- Method -->
-      <h5>Method</h5>
-      <ul class="index-list methods">
-      {{#members.inherited.methods}}
-        <li class="index-item method{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
-          <a href="{{extended_from}}.html#method_{{name}}">{{name}}</a>
-        </li>
-      {{/members.inherited.methods}}
-      </ul>
+      {{#if members.inherited.methods}}
+        <h5>Method</h5>
+        <ul class="index-list methods">
+        {{#members.inherited.methods}}
+          <li class="index-item method{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
+            <a href="{{extended_from}}.html#method_{{name}}">{{name}}</a>
+          </li>
+        {{/members.inherited.methods}}
+        </ul>
+      {{/if}}
+
       <!-- Event -->
-      <h5>Event</h5>
-      <ul class="index-list events">
-      {{#inheritedItems.events}}
-        <li class="index-item event{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
-          <a href="{{extended_from}}.html#event_{{name}}">{{name}}</a>
-        </li>
-      {{/inheritedItems.events}}
-      </ul>
+      {{#if members.inherited.events}}
+        <h5>Event</h5>
+        <ul class="index-list events">
+        {{#inheritedItems.events}}
+          <li class="index-item event{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}">
+            <a href="{{extended_from}}.html#event_{{name}}">{{name}}</a>
+          </li>
+        {{/inheritedItems.events}}
+        </ul>
+      {{/if}}
     </div>
   {{/if}}
 
