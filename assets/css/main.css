@@ -572,7 +572,7 @@ ul.apis .api-list-item-clickable a:hover {
 ul.apis .members-list {
   overflow: hidden;
   transition: all .5s;
-  max-height: 500px;
+  max-height: 10000px;
   padding-left: 10px;
 }
 ul.apis .members-list.hidden {
