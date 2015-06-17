@@ -25,7 +25,9 @@ YUI().use(
         // on the loaded content.
         defaultRoute = Y.Pjax.defaultRoute.concat(function(req, res, next) {
             prettyPrint();
+
             bdNode.removeClass('loading');
+            window.scrollTo(0, 0);
 
             next();
         });
