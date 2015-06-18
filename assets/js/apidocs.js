@@ -9,6 +9,7 @@ YUI().use(
             localStorage = win.localStorage,
 
             bdNode = Y.one('#bd'),
+            mainNode = document.getElementById('docs-main'),
 
             pjax,
             defaultRoute,
@@ -25,10 +26,10 @@ YUI().use(
         // on the loaded content.
         defaultRoute = Y.Pjax.defaultRoute.concat(function(req, res, next) {
             prettyPrint();
-
             bdNode.removeClass('loading');
-            window.scrollTo(0, 0);
-
+            if (!location.hash) {
+                mainNode.scrollTop = 0;
+            }
             next();
         });
 
@@ -145,18 +146,16 @@ YUI().use(
 
         pjax.updateVisibility = function() {
             var container = pjax.get('container');
+            var _deprecated = Y.one('#api-show-deprecated');
+            var _protected = Y.one('#api-show-protected');
+            var _private = Y.one('#api-show-private');
 
-            // TODO(@yorkie): to be removed
-            // container.toggleClass('hide-inherited', !Y.one('#api-show-inherited').get('checked'));
-
-            container.toggleClass('show-deprecated',
-                Y.one('#api-show-deprecated').get('checked'));
-
-            container.toggleClass('show-protected',
-                Y.one('#api-show-protected').get('checked'));
-
-            container.toggleClass('show-private',
-                Y.one('#api-show-private').get('checked'));
+            if (_deprecated && _deprecated.get)
+                container.toggleClass('show-deprecated', _deprecated.get('checked'));
+            if (_protected && _protected.get)
+                container.toggleClass('show-protected', _protected.get('checked'));
+            if (_private && _private.get)
+                container.toggleClass('show-private', _private.get('checked'));
 
             pjax.checkVisibility();
         };
