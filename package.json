@@ -23,5 +23,8 @@
   "homepage": "https://github.com/fireball-x/firedoc-theme-notab",
   "devDependencies": {
     "materialize-css": "^0.96.1"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
   }
 }

@@ -565,6 +565,10 @@ ul.apis .api-list-item-clickable a {
   position: relative;
   z-index: 100;
   transition: all .3s;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  max-width: 150px;
 }
 ul.apis .api-list-item-clickable a:hover {
   color: #f60;
