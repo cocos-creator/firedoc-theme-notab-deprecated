@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="{{assets}}/vendor/prettify/prettify-min.css">
   <link rel="stylesheet" href="{{assets}}/css/main.css" id="site_styles">
   <link rel="shortcut icon" type="image/ico" href="{{assets}}/favicon.ico">
+  <link rel="stylesheet" href="{{assets}}/css/solarized_light.css">
   <script src="{{assets}}/vendor/yui-min.js"></script>
 </head>
 <body>
@@ -18,13 +19,13 @@
           {{#if project.logo}}
           <img class="logo" src="{{project.logo}}" title="{{project.name}}">
           {{else}}
-          <img class="logo" src="http://docs-zh.fireball-x.com/images/logo.png" 
+          <img class="logo" src="http://docs-zh.fireball-x.com/images/logo.png"
             title="Fireball Engine API">
           {{/if}}
         </a>
         {{#if project.name}}
           <h1 class="project-name">{{project.name}}</h1>
-          {{#if project.version}} 
+          {{#if project.version}}
           <span class="project-version">{{project.version}}</span>
           {{/if}}
         {{else}}
@@ -57,5 +58,7 @@
 <script src="{{assets}}/../api.js"></script>
 <script src="{{assets}}/js/api-list.js"></script>
 <script src="{{assets}}/js/apidocs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

@@ -1,7 +1,10 @@
 <a name="property_{{name}}" class="anchor-link"></a>
 <div class="property item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if extended_from}} inherited{{/if}}">
-    <h3 class="name"><code>{{name}}</code>
+    <h3 class="name">{{name}}
     <span class="type">{{#crossLink type}}{{/crossLink}}</span>
+    {{#if foundAt}}
+    <a class="foundat" href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
+    {{/if}}
 
     {{#if deprecated}}
         <i class="badge badge-deprecated" title="{{deprecationMessage}}">
@@ -37,17 +40,14 @@
                 <p>Inherited from
                 <a href="{{crossLinkRaw extended_from}}#property_{{name}}" class="type">{{extended_from}}</a>:
             {{else}}
-                {{#providedBy}}
+                <!-- {{#providedBy}}
                     <p>Provided by the <a href="../modules/{{.}}.html" class="module-name">{{.}}</a> module.</p>
-                {{/providedBy}}
-                <p>
-                {{#if foundAt}}
+                {{/providedBy}} -->
+                <!-- <p> -->
+                <!-- {{#if foundAt}}
                 Defined in
-                {{/if}}
+                {{/if}} -->
             {{/if}}
-        {{/if}}
-        {{#if foundAt}}
-        <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
         {{/if}}
         </p>
 

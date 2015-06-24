@@ -1,7 +1,7 @@
 
 <h1>
   <span class="type">Class</span>
-  <span class="name">{{name}}</span> 
+  <span class="name">{{name}}</span>
 </h1>
 
 <div class="box meta">
@@ -58,13 +58,12 @@
 <div class="box intro">{{{description}}}</div>
 
 <!-- Class member index -->
-{{> items-index}}
 
 <div class="class-detail">
 
   {{#if members.properties}}
     <div class="properties-detail">
-      <h2>Properties</h2>
+      <h3 class="section-title">Properties</h3>
       {{#members.properties}}{{>props}}{{/members.properties}}
       <div class="no-visible-items-message">
         <p>There are no properties that match your current filter settings. You can change your filter settings in the index section on this page. <a href="#index" class="index-jump-link">index</a></p>
@@ -74,18 +73,18 @@
 
   {{#if members.attributes}}
     <div class="attrs-detail">
-      <h2>Attributes</h2>
+      <h3  class="section-title">Attributes</h3>
       {{#members.attributes}}{{> attrs}}{{/members.attributes}}
     </div>
   {{/if}}
 
   {{#if is_constructor}}
-    <div class="constructor"><h2>Constructor</h2>{{>method}}</div>
+    <div class="constructor"><h3 class="section-title">Constructor</h3>{{>method}}</div>
   {{/if}}
 
   {{#if members.methods}}
     <div class="methods-detail">
-      <h2>Methods</h2>
+      <h3 class="section-title">Methods</h3>
       {{#members.methods}}{{> method}}{{/members.methods}}
       <div class="no-visible-items-message">
         <p>There are no methods that match your current filter settings. You can change your filter settings in the index section on this page. <a href="#index" class="index-jump-link">index</a></p>
@@ -95,7 +94,7 @@
 
   {{#if members.events}}
     <div class="events-detail">
-      <h2>Events</h2>
+      <h3 class="section-title">Events</h3>
       {{#members.events}}{{> events}}{{/members.events}}
       <div class="no-visible-items-message">
         <p>There are no events that match your current filter settings. You can change your filter settings in the index section on this page. <a href="#index" class="index-jump-link">index</a></p>
@@ -104,4 +103,3 @@
   {{/if}}
 
 </div>
-

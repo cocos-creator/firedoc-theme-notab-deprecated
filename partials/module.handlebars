@@ -59,7 +59,7 @@
 <!-- Class member index -->
 {{#if classes.length}}
   <div class="index-section properties">
-    <h2>Class</h2>
+    <h3 class="section-title">Class</h3>
     <ul>
       {{#classes}}
         <li>
@@ -80,7 +80,7 @@
 
 {{#if subModules.length}}
   <div class="index-section properties">
-    <h2>Sub Modules</h2>
+    <h3 class="section-title">Sub Modules</h3>
     <ul class="index-list properties">
       {{#subModules}}
         <li class="index-item">
@@ -92,36 +92,36 @@
     </ul>
   </div>
 {{/if}}
-
-<h2>Direct Members</h2>
-{{> items-index}}
+<!--
+<h3>Direct Members</h3>
+{{> items-index}} -->
 
 <div class="yui3-g">
 
   {{#if members.properties}}
     <div class="yui3-u-1-2">
-      <h3>Properties:</h3>
+      <h3 class="section-title">Properties</h3>
       {{#members.properties}}{{> props}}{{/members.properties}}
     </div>
   {{/if}}
 
   {{#if members.attributes}}
     <div class="yui3-u-1-2">
-      <h3>Attributes:</h3>
+      <h3 class="section-title">Attributes</h3>
       {{#members.attributes}}{{> attrs}}{{/members.attributes}}
     </div>
   {{/if}}
-  
+
   {{#if members.methods}}
     <div class="yui3-u-1-2">
-      <h3>Methods:</h3>
+      <h3 class="section-title">Methods</h3>
       {{#members.methods}}{{> method}}{{/members.methods}}
     </div>
   {{/if}}
 
   {{#if members.events}}
     <div class="yui3-u-1-2">
-      <h3>Events:</h3>
+      <h3 class="section-title">Events</h3>
       {{#members.events}}{{> method}}{{/members.events}}
     </div>
   {{/if}}
