@@ -645,12 +645,13 @@ ul.apis .api-list-item-module {
 ul.apis h3 {
     font-size: 12px;
     padding: 0;
-    margin: 10px 0 5px 0;
+    margin: 5px 0 5px 0;
     color: #fa0;
 }
 ul.apis .api-list-item-clickable {
     cursor: pointer;
-    padding: 6px 8px;
+    padding: 6px 8px 0 8px;
+    margin-top: 10px;
 }
 ul.apis .api-list-item-clickable a {
     position: relative;
