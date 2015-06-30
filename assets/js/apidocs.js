@@ -1,7 +1,6 @@
 /*global YUI, prettyPrint, $*/
 
 YUI().use(
-    'yuidoc-meta',
     'history-hash', 'node-screen', 'node-style', 'pjax',
     function(Y) {
 
