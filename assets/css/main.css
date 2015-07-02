@@ -360,7 +360,7 @@ td {
 /* Filters */
 
 .protected, .private, .deprecated {
-    display: none;
+    display: none !important;
 }
 .show-protected .protected, .show-private .private, .show-deprecated .deprecated {
     display: block;

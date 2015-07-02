@@ -5,7 +5,7 @@
     <h3>properties</h3>
     <ul class="apis members api-members">
       {{#members.properties}}
-        <li>
+        <li class="{{access}}">
           <a class="name" href="{{parent.project.base}}/{{parent.type}}/{{parent.name}}.html#property_{{name}}">
             {{name}}
           </a>
@@ -18,7 +18,7 @@
     <h3>events</h3>
     <ul class="apis members api-members">
       {{#members.events}}
-        <li>
+        <li class="{{access}}">
           <a class="name" href="{{parent.project.base}}/{{parent.type}}/{{parent.name}}.html#event_{{name}}">
             {{name}}
           </a>
@@ -31,7 +31,7 @@
     <h3>attributes</h3>
     <ul class="apis members api-members">
       {{#members.attributes}}
-        <li>
+        <li class="{{access}}">
           <a class="name" href="{{parent.project.base}}/{{parent.type}}/{{parent.name}}.html#attr_{{name}}">
             {{name}}
           </a>
@@ -44,13 +44,11 @@
     <h3>methods</h3>
     <ul class="apis members api-members">
       {{#members.methods}}
-        {{# if access}}
-        <li>
+        <li class="{{access}}">
           <a class="name" href="{{parent.project.base}}/{{parent.type}}/{{parent.name}}.html#method_{{name}}">
             {{name}}
           </a>
         </li>
-        {{/if}}
       {{/members.methods}}
     </ul>
   {{/if}}
