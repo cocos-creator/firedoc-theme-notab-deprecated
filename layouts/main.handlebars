@@ -16,23 +16,23 @@
     <div class="content">
       <div class="project-title">
         <a href="http://docs.fireball-x.com">
-          {{#if project.logo}}
+          {{#if globals.project.logo}}
           <img class="logo" src="{{project.logo}}" title="{{project.name}}">
           {{else}}
           <img class="logo" src="http://docs.fireball-x.com/images/logo.png"
             title="Fireball Editor API">
           {{/if}}
         </a>
-        {{#if project.name}}
-          <h1 class="project-name">{{project.name}}</h1>
-          {{#if project.version}}
-          <span class="project-version">{{project.version}}</span>
+        {{#if globals.project.name}}
+          <h1 class="project-name">{{globals.project.name}}</h1>
+          {{#if globals.project.version}}
+          <span class="project-version">{{globals.project.version}}</span>
           {{/if}}
         {{else}}
           <h1 class="project-name">Fireball Engine API</h1>
         {{/if}}
-        {{#if project.description}}
-          <p class="description">{{project.description}}</p>
+        {{#if globals.project.description}}
+          <p class="description">{{globals.project.description}}</p>
         {{else}}
           <p class="description">Fireball is the game engine for the future.</p>
         {{/if}}
