@@ -64,11 +64,11 @@
       {{#classes}}
         <li>
           {{#if is_enum}}
-            <a href="{{relink "enums"}}/{{name}}.html">
+            <a href="{{project.base}}/enums/{{name}}.html">
               {{name}}
             </a>
           {{else}}
-            <a href="{{relink "classes"}}/{{name}}.html">
+            <a href="{{project.base}}/classes/{{name}}.html">
               {{name}}
             </a>
           {{/if}}
@@ -84,7 +84,7 @@
     <ul class="index-list properties">
       {{#subModules}}
         <li class="index-item">
-          <a href="{{relink "modules"}}/{{name}}.html">
+          <a href="{{project.base}}/modules/{{name}}.html">
             {{name}}
           </a>
         </li>
