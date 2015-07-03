@@ -91,8 +91,11 @@
 
         {{#if process}}
             <div class="processRun">
-                Process: <a href="http://docs.fireball-x.com/editor/ipc-channel/#Core_and_Page_Process">{{process}}</a>
-            </div>  
+                process:
+                {{#process}}
+                    <a href="http://docs.fireball-x.com/editor/ipc-channel/#Core_and_Page_Process">{{.}}</a>
+                {{/process}}
+            </div>
         {{/if}}
     </div>
 
