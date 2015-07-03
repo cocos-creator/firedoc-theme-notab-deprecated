@@ -72,7 +72,7 @@
     <ul>
       {{#classes}}
         <li>
-          {{#if is_enum}}
+          {{#if isEnum}}
             <a href="{{project.base}}/enums/{{name}}.html">
               {{name}}
             </a>
@@ -87,17 +87,17 @@
   </div>
 {{/if}}
 
-{{#if subModules.length}}
+{{#if submodules.length}}
   <div class="index-section properties">
     <h3 class="section-title">Sub Modules</h3>
-    <ul class="index-list properties">
-      {{#subModules}}
-        <li class="index-item">
+    <ul>
+      {{#submodules}}
+        <li>
           <a href="{{project.base}}/modules/{{name}}.html">
             {{name}}
           </a>
         </li>
-      {{/subModules}}
+      {{/submodules}}
     </ul>
   </div>
 {{/if}}
