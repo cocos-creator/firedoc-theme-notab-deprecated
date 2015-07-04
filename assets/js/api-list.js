@@ -15,7 +15,7 @@ $(document).ready(function () {
   var inputing = false;
   var searchBox = $('#api-tabview-filter>input[type=search]');
   searchBox.on(
-    'keyup',
+    'input',
     function (e) {
       clearTimeout(inputing);
       inputing = setTimeout(function () {
