@@ -4,7 +4,6 @@
   "description": "the theme notab for firedoc",
   "main": "locals.js",
   "scripts": {
-    "preinstall": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
