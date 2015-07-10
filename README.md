@@ -6,13 +6,13 @@ firedoc-theme-notab
 ### 安装
 
 ```sh
-$ firedoc-theme install https://github.com/fireball-x/firedoc-theme-notab
+$ firedoc install notab
 ```
 
 ### 使用该主题
 
 ```sh
-$ firedoc ... --theme firedoc-theme-notab
+$ firedoc <path> --theme notab
 ```
 
 ### 开源协议
