@@ -19,23 +19,27 @@
       {{#globals.classes}}
         <li>
           <div class="api-list-item-clickable wave-btn">
-            {{#if isEnum}}
-              <a class="enum" 
-                href="{{project.base}}/modules/{{name}}.html" 
-                title="{{namespace}}">{{namespace}}</a>
-              <i class="flag">enum</i>
-            {{else}}
-              <a class="class" 
-                href="{{project.base}}/classes/{{name}}.html" 
-                title="{{namespace}}">{{namespace}}</a>
-              <i class="flag">class</i>
-            {{/if}}
+            <a class="class" 
+              href="{{project.base}}/classes/{{name}}.html" 
+              title="{{namespace}}">{{namespace}}</a>
+            <i class="flag">class</i>
           </div>
           <div class="members-list hidden">
             {{> sidebar-members}}
           </div>
         </li>
       {{/globals.classes}}
+      {{#globals.enums}}
+        <li>
+          <a class="enum" 
+            href="{{project.base}}/enums/{{name}}.html" 
+            title="{{namespace}}">{{namespace}}</a>
+          <i class="flag">enum</i>
+        </li>
+        <div class="members-list hidden">
+          {{> sidebar-members}}
+        </div>
+      {{/globals.enums}}
       </ul>
     </div>
   </div>
