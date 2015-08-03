@@ -1,6 +1,5 @@
 body {
-    font-family: "Microsoft yahei", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-    font-size: 15px;
+    font: 1em "jaf-bernino-sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;       font-size: 15px;
     line-height: 1.4;
     color: #333;
     margin: 0;
@@ -116,6 +115,7 @@ a.badge:hover {
 
 p {
     margin: 0.5em 0 1.4em 0;
+    font-size: 0.9em;
 }
 dd p, td p {
     margin-bottom: 0;
@@ -129,7 +129,7 @@ dd p:first-child, td p:first-child {
 h1, h2, h3, h4, h5, h6 {
     color: #000000;
     /*was #f80*/
-    font-family: "Microsoft yahei","Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0px;
     padding: 0;
     font-weight: bold;
@@ -141,11 +141,11 @@ h1 {
     padding-bottom: 15px;
 }
 h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     border-bottom: 1px solid #eee;
 }
 h3 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #333;
 }
 h4 {
@@ -418,12 +418,13 @@ td {
 /* === Properties === */
 
 .property.item {
+    border-bottom: #e8e8e8 1px solid;
 }
 .property.item, .events.item {
     margin: 15px 0;
 }
 .property.item h3, .events.item h3 {
-    font-size: 1.1em;
+    font-size: 1.0em;
     margin-bottom: 0;
 }
 .property.item h3 .type, .events.item h3 .type {
@@ -517,6 +518,9 @@ td {
 }
 .args ul.args-list {
     padding-left: 0;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 .method .meta {
     /* background-color: #f8f8f8; */
@@ -614,15 +618,16 @@ table.params-list {
 ul.apis {
     list-style: none;
     padding: 0;
-    margin: 0;
     background-color: #fff;
     line-height: 1.5;
     font-size: 13px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
 }
 ul.apis li {
     background-color: #fff;
     display: block;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold;
     border-bottom: 1px solid #fafafa;
 }
@@ -642,7 +647,7 @@ ul.apis .api-list-item-module {
     font-size: 13px;
 }
 ul.apis h3 {
-    font-size: 15px;
+    font-size: 12px;
     padding: 0;
     margin: 0px 0 0px 0px;
     color: #fa0;
