@@ -8,33 +8,37 @@
       {{#globals.modules}}
         <li>
           <div class="api-list-item-clickable wave-btn">
-            <a class="module" href="{{project.base}}/modules/{{name}}.html">{{namespace}}</a>
-            <i class="flag">module</i>
+            <a class="module" href="{{../base}}/modules/{{name}}.html">{{namespace}}</a>
+            <i class="flag">{{i18n.sidebar.MODULES}}</i>
           </div>
           <div class="members-list hidden">
             {{> sidebar-members}}
           </div>
         </li>
       {{/globals.modules}}
+      <hr class="sidebar-divider">
       {{#globals.classes}}
         <li>
           <div class="api-list-item-clickable wave-btn">
             <a class="class" 
-              href="{{project.base}}/classes/{{name}}.html" 
+              href="{{../base}}/classes/{{name}}.html" 
               title="{{namespace}}">{{namespace}}</a>
-            <i class="flag">class</i>
+            <i class="flag">{{i18n.sidebar.CLASSES}}</i>
           </div>
           <div class="members-list hidden">
             {{> sidebar-members}}
           </div>
         </li>
       {{/globals.classes}}
+      <hr class="sidebar-divider">
       {{#globals.enums}}
         <li>
-          <a class="enum" 
-            href="{{project.base}}/enums/{{name}}.html" 
-            title="{{namespace}}">{{namespace}}</a>
-          <i class="flag">enum</i>
+          <div class="api-list-item-clickable">
+            <a class="enum" 
+              href="{{../base}}/enums/{{name}}.html" 
+              title="{{namespace}}">{{namespace}}</a>
+            <i class="flag">{{i18n.sidebar.ENUMS}}</i>
+          </div>
         </li>
         <div class="members-list hidden">
           {{> sidebar-members}}

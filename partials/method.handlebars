@@ -20,7 +20,7 @@
                 <span class="paren">)</span>
             </div>
         {{else}}
-            <span class="paren">()</span>
+            <span class="paren">( )</span>
         {{/if}}
 
         {{#if return}}
@@ -63,7 +63,7 @@
 
     <div class="meta">
         {{#if overwritten_from}}
-            <p>Inherited from
+            <p>{{i18n.INHERITED_FROM}}
                 <a href="{{crossLinkRaw overwritten_from/class}}#method_{{overwritten_from/name}}" class="type">
                 {{overwritten_from/class}}
             </a>
@@ -72,19 +72,19 @@
                 {{/if}}
         {{else}}
             {{#if extended_from}}
-                <p>Inherited from
+                <p>{{i18n.INHERITED_FROM}}
                     <a href="{{crossLinkRaw extended_from}}#method_{{name}}" class="type">{{extended_from}}</a>:
             {{/if}}
         {{/if}}
 
         {{#if deprecationMessage}}
-            <p class="deprecated">Deprecated:
+            <p class="deprecated">{{i18n.DEPRECATED}}:
                 <span class="message">{{deprecationMessage}}</span>
             </p>
         {{/if}}
 
         {{#if since}}
-            <p class="since">Available since
+            <p class="since">{{i18n.AVAILABLE_SINCE}}
                 <span class="message">{{since}}</span>
             </p>
         {{/if}}
@@ -109,12 +109,12 @@
                 <table class="params-list">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Type</th>
+                            <th>{{i18n.NAME}}</th>
+                            <th>{{i18n.TYPE}}</th>
                             {{#if optdefault}}
-                                <th>Default</th>
+                                <th>{{i18n.DEFAULTS}}</th>
                             {{/if}}
-                            <th class="last">Description</th>
+                            <th class="last">{{i18n.DESCRIPTION}}</th>
                         </tr>
                     </thead>
 
@@ -207,11 +207,11 @@
 
         {{#return}}
             <div class="returns">
-                <h4>Returns:</h4>
+                <h4>{{i18n.RETURNS}}:</h4>
 
                 <div class="returns-description">
                     {{#if type}}
-                        <span>Type:</span>
+                        <span>{{i18n.TYPE}}:</span>
                         <span class="type">
                             {{#crossLink type}}{{/crossLink}}
                         </span>
@@ -227,7 +227,7 @@
 
         {{#example}}
             <div class="example">
-                <h4>Example:</h4>
+                <h4>{{i18n.EXAMPLES}}:</h4>
                 <div class="example-content">
                     {{{.}}}
                 </div>

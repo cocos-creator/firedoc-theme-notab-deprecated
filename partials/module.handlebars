@@ -1,6 +1,6 @@
 
 <h1>
-  <span class="type">Module</span>
+  <span class="type">{{i18n.MODULE}}</span>
   <span class="name">{{name}}</span>
 </h1>
 <div class="box clearfix meta">
@@ -46,9 +46,9 @@
   <div class="box deprecated">
     <p>
       {{#if deprecationMessage}}
-        <strong>Deprecated:</strong> {{deprecationMessage}}
+        <strong>{{i18n.options.DEPRECADED}}</strong> {{deprecationMessage}}
       {{else}}
-        This module is deprecated.
+        {{i18n.options.DEPRECATED_DESC}} 
       {{/if}}
     </p>
   </div>
@@ -60,7 +60,7 @@
 
 {{#example}}
   <div class="example">
-    <h4>Example:</h4>
+    <h4>{{i18n.EXAMPLES}}</h4>
     <div class="example-content">{{{.}}}</div>
   </div>
 {{/example}}
@@ -68,16 +68,16 @@
 <!-- Class member index -->
 {{#if classes.length}}
   <div class="index-section properties">
-    <h3 class="section-title">Class</h3>
+    <h3 class="section-title">{{i18n.CLASS}}</h3>
     <ul>
       {{#classes}}
         <li>
           {{#if isEnum}}
-            <a href="{{project.base}}/enums/{{name}}.html">
+            <a href="{{../base}}/enums/{{name}}.html">
               {{name}}
             </a>
           {{else}}
-            <a href="{{project.base}}/classes/{{name}}.html">
+            <a href="{{../base}}/classes/{{name}}.html">
               {{name}}
             </a>
           {{/if}}
@@ -89,11 +89,11 @@
 
 {{#if submodules.length}}
   <div class="index-section properties">
-    <h3 class="section-title">Sub Modules</h3>
+    <h3 class="section-title">{{i18n.SUBMODULE}}</h3>
     <ul>
       {{#submodules}}
         <li>
-          <a href="{{project.base}}/modules/{{name}}.html">
+          <a href="{{../base}}/modules/{{name}}.html">
             {{name}}
           </a>
         </li>
@@ -109,28 +109,28 @@
 
   {{#if members.properties}}
     <div class="yui3-u-1-2">
-      <h3 class="section-title">Properties</h3>
+      <h3 class="section-title">{{i18n.PROPERTIES}}</h3>
       {{#members.properties}}{{> props}}{{/members.properties}}
     </div>
   {{/if}}
 
   {{#if members.attributes}}
     <div class="yui3-u-1-2">
-      <h3 class="section-title">Attributes</h3>
+      <h3 class="section-title">{{i18n.ATTRIBUTES}}</h3>
       {{#members.attributes}}{{> attrs}}{{/members.attributes}}
     </div>
   {{/if}}
 
   {{#if members.methods}}
     <div class="yui3-u-1-2">
-      <h3 class="section-title">Methods</h3>
+      <h3 class="section-title">{{i18n.METHODS}}</h3>
       {{#members.methods}}{{> method}}{{/members.methods}}
     </div>
   {{/if}}
 
   {{#if members.events}}
     <div class="yui3-u-1-2">
-      <h3 class="section-title">Events</h3>
+      <h3 class="section-title">{{i18n.EVENTS}}</h3>
       {{#members.events}}{{> method}}{{/members.events}}
     </div>
   {{/if}}
