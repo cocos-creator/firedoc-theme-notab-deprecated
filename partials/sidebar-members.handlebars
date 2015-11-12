@@ -6,8 +6,7 @@
     <ul class="apis members api-members">
       {{#members.properties}}
         <li class="{{access}}">
-
-          <a class="name" href="{{../view.base}}/{{parent.type}}/{{parent.name}}.html#property_{{name}}">
+          <a class="name" href="{{@root.base}}/{{parent.type}}/{{parent.name}}.html#property_{{name}}">
             {{name}}
           </a>
         </li>
@@ -20,7 +19,7 @@
     <ul class="apis members api-members">
       {{#members.events}}
         <li class="{{access}}">
-          <a class="name" href="{{../base}}/{{parent.type}}/{{parent.name}}.html#event_{{name}}">
+          <a class="name" href="{{@root/base}}/{{parent.type}}/{{parent.name}}.html#event_{{name}}">
             {{name}}
           </a>
         </li>
@@ -33,7 +32,7 @@
     <ul class="apis members api-members">
       {{#members.attributes}}
         <li class="{{access}}">
-          <a class="name" href="{{../base}}/{{parent.type}}/{{parent.name}}.html#attr_{{name}}">
+          <a class="name" href="{{@root/base}}/{{parent.type}}/{{parent.name}}.html#attr_{{name}}">
             {{name}}
           </a>
         </li>
@@ -46,7 +45,7 @@
     <ul class="apis members api-members">
       {{#members.methods}}
         <li class="{{access}}">
-          <a class="name" href="{{../base}}/{{parent.type}}/{{parent.name}}.html#method_{{name}}">
+          <a class="name" href="{{@root/base}}/{{parent.type}}/{{parent.name}}.html#method_{{name}}">
             {{name}}
           </a>
         </li>
