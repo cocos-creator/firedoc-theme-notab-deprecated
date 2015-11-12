@@ -207,11 +207,11 @@
 
         {{#return}}
             <div class="returns">
-                <h4>{{i18n.RETURNS}}:</h4>
+                <h4>{{../i18n.RETURNS}}:</h4>
 
                 <div class="returns-description">
                     {{#if type}}
-                        <span>{{i18n.TYPE}}:</span>
+                        <span>{{../i18n.TYPE}}:</span>
                         <span class="type">
                             {{#crossLink type}}{{/crossLink}}
                         </span>
@@ -227,7 +227,7 @@
 
         {{#example}}
             <div class="example">
-                <h4>{{i18n.EXAMPLES}}:</h4>
+                <h4>{{../i18n.EXAMPLES}}:</h4>
                 <div class="example-content">
                     {{{.}}}
                 </div>
