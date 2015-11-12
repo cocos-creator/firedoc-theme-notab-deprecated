@@ -1,6 +1,6 @@
 
 <h1>
-  <span class="type">Class</span>
+  <span class="type">{{i18n.ClASS}}</span>
   <span class="name">{{name}}</span>
 </h1>
 
@@ -18,13 +18,13 @@
 
   {{#if extends}}
     <div class="extends">
-      Extends {{#crossLink extends}}{{/crossLink}}
+      {{i18n.EXTENDS_FOR}} {{#crossLink extends}}{{/crossLink}}
     </div>
   {{/if}}
 
   {{#if foundAt}}
     <div class="foundat">
-      Defined in: <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
+      {{i18n.DEFINED_IN}}: <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
     </div>
   {{/if}}
 
@@ -39,15 +39,15 @@
 
   {{#if module}}
     {{#if submodule}}
-      Module: {{#crossLinkModule submodule}}{{/crossLinkModule}}<br>
-      Parent Module: {{#crossLinkModule module}}{{/crossLinkModule}}
+      {{i18n.MODULE}}: {{#crossLinkModule submodule}}{{/crossLinkModule}}<br>
+      {{i18n.PARENT_MODULE}}: {{#crossLinkModule module}}{{/crossLinkModule}}
     {{else}}
-      Module: {{#crossLinkModule module}}{{/crossLinkModule}}
+      {{i18n.MODULE}}: {{#crossLinkModule module}}{{/crossLinkModule}}
     {{/if}}
   {{/if}}
 
   {{#if since}}
-    <p>Available since {{since}}</p>
+    <p>{{i18n.AVAILABLE_SINCE}} {{since}}</p>
   {{/if}}
 
 </div>
@@ -56,9 +56,9 @@
   <div class="box deprecated">
     <p>
       {{#if deprecationMessage}}
-        <strong>Deprecated:</strong> {{deprecationMessage}}
+        <strong>{{i18n.DEPRECATED}}:</strong> {{deprecationMessage}}
       {{else}}
-        This class is deprecated.
+        {{i18n.DEPRECATED_DESC}}
       {{/if}}
     </p>
   </div>
@@ -74,7 +74,7 @@
 
   {{#if members.properties}}
     <div class="properties-detail">
-      <h3 class="section-title">Properties</h3>
+      <h3 class="section-title">{{i18n.PROPERTIES}}</h3>
       {{#members.properties}}{{>props}}{{/members.properties}}
       <div class="no-visible-items-message">
         <p>There are no properties that match your current filter settings. You can change your filter settings in the index section on this page. <a href="#index" class="index-jump-link">index</a></p>
@@ -84,18 +84,18 @@
 
   {{#if members.attributes}}
     <div class="attrs-detail">
-      <h3  class="section-title">Attributes</h3>
+      <h3  class="section-title">{{i18n.ATTRIBUTES}}</h3>
       {{#members.attributes}}{{> attrs}}{{/members.attributes}}
     </div>
   {{/if}}
 
   {{#if is_constructor}}
-    <div class="constructor"><h3 class="section-title">Constructor</h3>{{>method}}</div>
+    <div class="constructor"><h3 class="section-title">{{i18n.CONSTRUCTOR}}</h3>{{>method}}</div>
   {{/if}}
 
   {{#if members.methods}}
     <div class="methods-detail">
-      <h3 class="section-title">Methods</h3>
+      <h3 class="section-title">{{i18n.METHODS}}</h3>
       {{#members.methods}}{{> method}}{{/members.methods}}
       <div class="no-visible-items-message">
         <p>There are no methods that match your current filter settings. You can change your filter settings in the index section on this page. <a href="#index" class="index-jump-link">index</a></p>
@@ -105,7 +105,7 @@
 
   {{#if members.events}}
     <div class="events-detail">
-      <h3 class="section-title">Events</h3>
+      <h3 class="section-title">{{i18n.EVENTS}}</h3>
       {{#members.events}}{{> events}}{{/members.events}}
       <div class="no-visible-items-message">
         <p>There are no events that match your current filter settings. You can change your filter settings in the index section on this page. <a href="#index" class="index-jump-link">index</a></p>

@@ -2,11 +2,11 @@
 {{#if members}}
 
   {{#if members.properties}}
-    <h3>properties</h3>
+    <h3>{{i18n.sidebar.PROPERTIES}}</h3>
     <ul class="apis members api-members">
       {{#members.properties}}
         <li class="{{access}}">
-          <a class="name" href="{{parent.project.base}}/{{parent.type}}/{{parent.name}}.html#property_{{name}}">
+          <a class="name" href="{{@root.base}}/{{parent.type}}/{{parent.name}}.html#property_{{name}}">
             {{name}}
           </a>
         </li>
@@ -15,11 +15,11 @@
   {{/if}}
 
   {{#if members.events}}
-    <h3>events</h3>
+    <h3>{{i18n.sidebar.EVENTS}}</h3>
     <ul class="apis members api-members">
       {{#members.events}}
         <li class="{{access}}">
-          <a class="name" href="{{parent.project.base}}/{{parent.type}}/{{parent.name}}.html#event_{{name}}">
+          <a class="name" href="{{@root/base}}/{{parent.type}}/{{parent.name}}.html#event_{{name}}">
             {{name}}
           </a>
         </li>
@@ -28,11 +28,11 @@
   {{/if}}
 
   {{#if members.attributes}}
-    <h3>attributes</h3>
+    <h3>{{i18n.sidebar.ATTRIBUTES}}</h3>
     <ul class="apis members api-members">
       {{#members.attributes}}
         <li class="{{access}}">
-          <a class="name" href="{{parent.project.base}}/{{parent.type}}/{{parent.name}}.html#attr_{{name}}">
+          <a class="name" href="{{@root/base}}/{{parent.type}}/{{parent.name}}.html#attr_{{name}}">
             {{name}}
           </a>
         </li>
@@ -41,11 +41,11 @@
   {{/if}}
 
   {{#if members.methods}}
-    <h3>methods</h3>
+    <h3>{{i18n.sidebar.METHODS}}</h3>
     <ul class="apis members api-members">
       {{#members.methods}}
         <li class="{{access}}">
-          <a class="name" href="{{parent.project.base}}/{{parent.type}}/{{parent.name}}.html#method_{{name}}">
+          <a class="name" href="{{@root/base}}/{{parent.type}}/{{parent.name}}.html#method_{{name}}">
             {{name}}
           </a>
         </li>

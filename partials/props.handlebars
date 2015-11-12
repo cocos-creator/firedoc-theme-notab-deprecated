@@ -28,7 +28,7 @@
 
     <div class="meta">
         {{#if overwritten_from}}
-            <p>Inherited from
+            <p>{{i18n.INHERITED_FROM}}
             <a href="{{crossLinkRaw overwritten_from/class}}#property_{{overwritten_from/name}}" class="type">
                 {{overwritten_from/class}}
             </a>
@@ -37,7 +37,7 @@
             {{/if}}
         {{else}}
             {{#if extended_from}}
-                <p>Inherited from
+                <p>{{i18n.INHERITED_FROM}}
                 <a href="{{crossLinkRaw extended_from}}#property_{{name}}" class="type">{{extended_from}}</a>:
             {{else}}
                 <!-- {{#providedBy}}
@@ -52,11 +52,11 @@
         </p>
 
         {{#if deprecationMessage}}
-            <p class="deprecated">Deprecated: <span class="message">{{deprecationMessage}}</span></p>
+            <p class="deprecated">{{i18n.DEPRECATED}}: <span class="message">{{deprecationMessage}}</span></p>
         {{/if}}
 
         {{#if since}}
-            <p class="since">Available since <span class="message">{{since}}</span></p>
+            <p class="since">{{i18n.AVAILABLE_SINCE}} <span class="message">{{since}}</span></p>
         {{/if}}
     </div>
 
@@ -64,12 +64,12 @@
         <div class="description">{{{description}}}</div>
 
         {{#if default}}
-            <p class="default"><strong>Default:</strong> <span class="default-value">{{default}}</span></p>
+            <p class="default"><strong>{{i18n.DEFAULTS}}:</strong> <span class="default-value">{{default}}</span></p>
         {{/if}}
 
         {{#example}}
             <div class="example">
-                <h4>Example:</h4>
+                <h4>{{../i18n.EXAMPLES}}:</h4>
                 <div class="example-content">
                     {{{.}}}
                 </div>
@@ -77,7 +77,7 @@
         {{/example}}
 
         {{#if subprops}}
-            <h4>Sub-properties:</h4>
+            <h4>{{i18n.SUB_PROPERTIES}}:</h4>
 
             <ul class="params-list">
                 {{#subprops}}
