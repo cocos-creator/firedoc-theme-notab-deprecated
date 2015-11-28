@@ -73,11 +73,11 @@
       {{#classes}}
         <li>
           {{#if isEnum}}
-            <a href="{{../base}}/enums/{{name}}.html">
+            <a href="{{@root.base}}/enums/{{name}}.html">
               {{name}}
             </a>
           {{else}}
-            <a href="{{../base}}/classes/{{name}}.html">
+            <a href="{{@root.base}}/classes/{{name}}.html">
               {{name}}
             </a>
           {{/if}}
@@ -93,7 +93,7 @@
     <ul>
       {{#submodules}}
         <li>
-          <a href="{{../base}}/modules/{{name}}.html">
+          <a href="{{@root.base}}/modules/{{name}}.html">
             {{name}}
           </a>
         </li>
