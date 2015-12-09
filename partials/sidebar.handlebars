@@ -18,17 +18,19 @@
       {{/globals.modules}}
       <hr class="sidebar-divider">
       {{#globals.classes}}
+        {{#is_not access 'private' }}
         <li>
           <div class="api-list-item-clickable wave-btn">
             <a class="class" 
-              href="{{../base}}/classes/{{name}}.html" 
+              href="{{@root.base}}/classes/{{name}}.html" 
               title="{{namespace}}">{{namespace}}</a>
             <i class="flag">{{i18n.sidebar.CLASSES}}</i>
           </div>
           <div class="members-list hidden">
-            {{> sidebar-members}}
+            {{> sidebar-members classname=name}}
           </div>
         </li>
+        {{/is_not}}
       {{/globals.classes}}
       <hr class="sidebar-divider">
       {{#globals.enums}}

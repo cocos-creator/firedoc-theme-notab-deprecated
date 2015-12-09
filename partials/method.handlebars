@@ -1,6 +1,7 @@
 <a name="method_{{name}}" class="anchor-link"></a>
-<div class="method item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if overwritten_from}} inherited{{/if}}{{#if extended_from}} inherited{{/if}}">
-    <h3 class="name">{{name}}
+<div class="method item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if overwritten_from}} inherited{{/if}}{{#if extendedFrom}} inherited{{/if}}">
+    <h3 class="name">{{name}} 
+
 
         {{#if params}}
             <div class="args">
@@ -64,16 +65,18 @@
     <div class="meta">
         {{#if overwritten_from}}
             <p>{{i18n.INHERITED_FROM}}
-                <a href="{{crossLinkRaw overwritten_from/class}}#method_{{overwritten_from/name}}" class="type">
+                <a href="{{crossLinkRaw overwrittenFrom/class}}#method_{{overwritten_from/name}}" class="type">
                 {{overwritten_from/class}}
             </a>
                 {{#if foundAt}}
                     but overwritten in
                 {{/if}}
         {{else}}
-            {{#if extended_from}}
-                <p>{{i18n.INHERITED_FROM}}
-                    <a href="{{crossLinkRaw extended_from}}#method_{{name}}" class="type">{{extended_from}}</a>:
+            {{#if extendedFrom}}
+                {{#shouldShowInherit extendedFrom}}
+                    <p>{{@root.i18n.INHERITED_FROM}}
+                        <a href="{{crossLinkRaw ../extendedFrom}}#method_{{name}}" class="type">{{../extendedFrom}}</a>:
+                {{/shouldShowInherit}}
             {{/if}}
         {{/if}}
 
@@ -211,7 +214,7 @@
 
                 <div class="returns-description">
                     {{#if type}}
-                        <span>{{../i18n.TYPE}}:</span>
+                        <span>{{@root.i18n.TYPE}}:</span>
                         <span class="type">
                             {{#crossLink type}}{{/crossLink}}
                         </span>

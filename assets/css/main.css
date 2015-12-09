@@ -450,6 +450,7 @@ td {
 .property.item .meta, .events.item .meta {
     color: #b0b0b0;
     font-size: 13px;
+    margin-top: 0.7em;
 }
 .property.item .meta p, .events.item .meta p {
     margin: 0;

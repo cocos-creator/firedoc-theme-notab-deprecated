@@ -1,5 +1,5 @@
 <a name="property_{{name}}" class="anchor-link"></a>
-<div class="property item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if extended_from}} inherited{{/if}}">
+<div class="property item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if extendedFrom}} inherited{{/if}}">
     <h3 class="name">{{name}}
     <span class="type">{{#crossLink type}}{{/crossLink}}</span>
     {{#if foundAt}}
@@ -36,10 +36,12 @@
             but overwritten in
             {{/if}}
         {{else}}
-            {{#if extended_from}}
-                <p>{{i18n.INHERITED_FROM}}
-                <a href="{{crossLinkRaw extended_from}}#property_{{name}}" class="type">{{extended_from}}</a>:
-            {{else}}
+            {{#if extendedFrom}}
+            {{#shouldShowInherit extendedFrom}}
+                <p>{{@root.i18n.INHERITED_FROM}}
+                <a href="{{crossLinkRaw ../extendedFrom}}#property_{{name}}" class="type">{{../extendedFrom}}</a>:
+            {{/shouldShowInherit}}
+            {{!-- {{else}} --}}
                 <!-- {{#providedBy}}
                     <p>Provided by the <a href="../modules/{{.}}.html" class="module-name">{{.}}</a> module.</p>
                 {{/providedBy}} -->

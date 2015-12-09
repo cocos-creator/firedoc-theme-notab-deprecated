@@ -17,9 +17,11 @@
   {{/if}}
 
   {{#if extends}}
+  {{#shouldShowInherit extends}}
     <div class="extends">
-      {{i18n.EXTENDS_FOR}} {{#crossLink extends}}{{/crossLink}}
+      {{@root.i18n.EXTENDS_FOR}} {{#crossLink ../extends}}{{/crossLink}}
     </div>
+  {{/shouldShowInherit}}
   {{/if}}
 
   {{#if foundAt}}

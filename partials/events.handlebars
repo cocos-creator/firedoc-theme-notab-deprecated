@@ -1,5 +1,5 @@
 <a name="event_{{name}}" class="anchor-link"></a>
-<div class="events item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if extended_from}} inherited{{/if}}">
+<div class="events item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if extendedFrom}} inherited{{/if}}">
     <h3 class="name"><code>{{name}}</code></h3>
     {{#if type}}
     <span class="type">{{#crossLink type}}{{/crossLink}}</span>
@@ -31,17 +31,19 @@
             but overwritten in
             {{/if}}
         {{else}}
-            {{#if extended_from}}
-                <p>Inherited from
-                <a href="{{crossLinkRaw extended_from}}#event_{{name}}" class="type">{{extended_from}}</a>:
+            {{#if extendedFrom}}
+            {{#shouldShowInherit extendedFrom}}
+                <p>{{@root.i18n.INHERITED_FROM}}
+                <a href="{{crossLinkRaw ../extendedFrom}}#event_{{name}}" class="type">{{../extendedFrom}}</a>:
+            {{/shouldShowInherit}}
             {{else}}
                 {{#providedBy}}
                     <p>Provided by the <a href="../modules/{{.}}.html" class="module-name">{{.}}</a> module.</p>
                 {{/providedBy}}
                 <p>
-                {{#if foundAt}}
-                Defined in
-                {{/if}}
+                {{!-- {{#if foundAt}} --}}
+                {{!-- Defined in --}}
+                {{!-- {{/if}} --}}
             {{/if}}
         {{/if}}
         {{#if foundAt}}
