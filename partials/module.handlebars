@@ -77,9 +77,11 @@
               {{name}}
             </a>
           {{else}}
+          {{#is_not access 'private' }}
             <a href="{{@root.base}}/classes/{{name}}.html">
               {{name}}
             </a>
+          {{/is_not}}
           {{/if}}
         </li>
       {{/classes}}
